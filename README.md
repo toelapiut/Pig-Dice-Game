@@ -13,8 +13,6 @@ A web application that generates a number randomly and returns it with specific 
 
 + If you keep rolling again, you accumulate points to add to your bank but if you get a Pig-Out, then all your points accumulated this turn are nullified.
 
-
-
 ### Technologies Used
 * HTML
 * CSS
