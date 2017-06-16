@@ -1,53 +1,60 @@
-@import url('https://fonts.googleapis.com/css?family=Limelight');
-@import url('https://fonts.googleapis.com/css?family=Monoton');
-body{
+body {
   background-image: url("../img/background-dice.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  color:#fff;
-  font-size: 13pt;
-  font-family: 'Limelight', cursive;
+  color: #fff;
+  font-size: 20pt;
+  font-family: 'Cormorant Unicase', serif;
 }
 
-#twoPlayer{
+#twoPlayer {
+  text-align: center;
   display: none;
 }
+
 .center {
   text-align: center;
 }
-.header{
+
+.header {
   text-align: center;
   font-size: 38pt;
   color: red;
-  font-family: 'Monoton', cursive;
-
-  /*-webkit-text-stroke: 1px #000;*/
+font-family: 'UnifrakturMaguntia', cursive;
   letter-spacing: 10px;
 }
+
 #winner {
-font-size: 28pt;
-color: red;
+  font-size: 28pt;
+  color: red;
 }
+
 img {
   height: 100px;
 }
+
 .spacer {
-    margin-top: 10px; /* define margin as you see fit */
+  margin-top: 10px;
+  /* defined margin */
 }
-.wrapper{
+
+.wrapper {
   margin: 10px;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   box-shadow: 3px 3px 11px #000000;
 }
+
 #preheader {
   background-color: #449d44;
 }
-button{
+
+button {
   margin-left: 30px;
 }
-.highlight{
-    background-color: rgba(255, 255, 255, 0.2);
+
+.highlight {
+  background-color: rgba(255, 255, 255, 0.2);
 }
