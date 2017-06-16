@@ -77,3 +77,30 @@ Referee.prototype.checkGame = function (){
     this.gameover = 1;
   }
 };
+
+//interface functions
+function switchClass(player1, player2){
+  if (player1.turn === 1){
+    $("div.player1").addClass("highlight");
+    $("div.player2").removeClass("highlight");
+  }else if (player2.turn === 1){
+    $("div.player1").removeClass("highlight");
+    $("div.player2").addClass("highlight");
+
+  }
+}
+
+function showScore(player1, player2){
+  $("#player1RunningTotal").text("Running Total: " + player1.runningTotal);
+  $("#player2RunningTotal").text("Running Total: " + player2.runningTotal);
+
+  $("#player1Total").text("Total: " + player1.score);
+  $("#player2Total").text("Total: " + player2.score);
+}
+
+function showDice (dice){
+  if (dice >= 1){
+    $("img").attr("src","img/" + dice + ".png").hide().fadeIn();
+  }
+
+}
