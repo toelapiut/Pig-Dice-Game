@@ -11,53 +11,64 @@
 </head>
 
 <body>
-
-  <button type="button" id="gameChoice" class="btn btn-success btn-lg" name="button">Play</button>
+  <div id="preheader">
+    <p class="header">Pig Dice</p>
   </div>
-  </div>
-  </div>
-
-  <div class="row" id="twoPlayer">
-    <div class="col-md-12 spacer">
-      <div class="wrapper center">
-        <h2>Dice:</h2>
-        <div id="dice">
-          <img src="img/1.png" />
-        </div>
-        <div id="winner">
-        </div>
-      </div>
-
-    </div>
-    <div class="col-md-6 spacer bgColor">
-      <div class="wrapper player1">
-        <h2> Player 1</h2>
-        <div id="player1RunningTotal">
-          Running Total: 0
-        </div>
-        <div id="player1Total">
-          Total: 0
+  <div class="container">
+    <div class="row" id="intro">
+      <div class="col-md-12 spacer">
+        <div class="wrapper">
+          <p>
+            <label for="gameChoice"> Two Player
+             <input type="radio" name="gameChoice" value="twoPlayer" checked>
+           </label>
+          </p>
+          <button type="button" id="gameChoice" class="btn btn-success btn-lg" name="button">Play</button>
         </div>
       </div>
     </div>
-    <div class="col-md-6 spacer bgColor">
-      <div class="wrapper player2">
-        <h2>Player 2</h2>
-        <div id="player2RunningTotal">
-          Running Total: 0
+
+    <div class="row" id="twoPlayer">
+      <div class="col-md-12 spacer">
+        <div class="wrapper center">
+          <h2>Dice:</h2>
+          <div id="dice">
+            <img src="img/1.png" />
+          </div>
+          <div id="winner">
+          </div>
         </div>
-        <div id="player2Total">
-          Total: 0
+
+      </div>
+      <div class="col-md-6 spacer bgColor">
+        <div class="wrapper player1">
+          <h2> Player 1</h2>
+          <div id="player1RunningTotal">
+            Running Total: 0
+          </div>
+          <div id="player1Total">
+            Total: 0
+          </div>
         </div>
       </div>
+      <div class="col-md-6 spacer bgColor">
+        <div class="wrapper player2">
+          <h2>Player 2</h2>
+          <div id="player2RunningTotal">
+            Running Total: 0
+          </div>
+          <div id="player2Total">
+            Total: 0
+          </div>
+        </div>
 
-    </div>
-    <div class="center">
-      <button type="button" id="roll" class="btn btn-success btn-lg" name="button">Roll</button>
-      <button type="button" id="hold" class="btn btn-warning btn-lg" name="button">Hold</button>
+      </div>
+      <div class="center">
+        <button type="button" id="roll" class="btn btn-success btn-lg" name="button">Roll</button>
+        <button type="button" id="hold" class="btn btn-warning btn-lg" name="button">Hold</button>
 
+      </div>
     </div>
-  </div>
   </div>
 </body>
 
