@@ -5,7 +5,7 @@ body {
   width: 100%;
   color: #fff;
   font-size: 20pt;
-  font-family: 'Cormorant Unicase', serif;
+  font-family: 'Londrina Shadow', cursive;
 }
 
 #twoPlayer {
@@ -21,7 +21,7 @@ body {
   text-align: center;
   font-size: 38pt;
   color: red;
-font-family: 'UnifrakturMaguntia', cursive;
+  font-family: 'UnifrakturCook', cursive;
   letter-spacing: 10px;
 }
 
@@ -40,6 +40,14 @@ img {
 }
 
 .wrapper {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  box-shadow: 3px 3px 11px #000000;
+}
+
+#instructions {
   margin: 10px;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.5);

@@ -1,76 +1,90 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Cinzel|Cormorant+Unicase|UnifrakturMaguntia" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <script src="js/jquery-3.1.1.js"></script>
-  <script src="js/scripts.js"></script>
-  <title> PIG Dice</title>
-</head>
-
-<body>
-  <div id="preheader">
-    <p class="header">Pig Dice</p>
-  </div>
-  <div class="container">
-    <div class="row" id="intro">
-      <div class="col-md-6 spacer">
-        <div class="wrapper">
-          <p>
-            <label for="gameChoice"> READY TO ROLL SOME DICES!!!!
-             <input type="radio" name="gameChoice" value="twoPlayer" checked>
-           </label>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow|Philosopher|Sancreek|UnifrakturCook:700" rel="stylesheet">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div id="preheader">
+      <p class="header">Pig Dice</p>
+    </div>
+    <div class="container">
+      <div class="row" id="intro">
+        <div class="col-md-12 spacer">
+          <div class="wrapper">
+            <p>
+            <label for="gameChoice"> Two Players
+              <input type="radio" name="gameChoice" value="twoPlayer" checked>
+            </label>
           </p>
-          <button type="button" id="gameChoice" class="btn btn-success btn-lg" name="button">Play</button>
+            <button type="button" id="gameChoice" class = "btn btn-success btn-lg" name="button">Play</button>
+          </div>
         </div>
       </div>
+      <div class="row" id="instructions">
+        <h1><hr>RULES<hr></h1>
+        <ul>
+
+
+          <li>The rules are simple. Two  players will compete. The first player to reach 100 points or more is the winner. </li>
+          <li>When it is your turn, you roll. If you get a Pig-Out or an Oinker, then you pass the pigs onto the next player.</li>
+          <li> If you get anything else, you may decide to roll again or pass the pigs.</li>
+          <li> If you keep rolling again, you accumulate points to add to your bank but if you get a Pig-Out, then all your points accumulated this turn are nullified.</li>
+        </ul>
+      </div>
+
+      <div class="row" id="twoPlayer">
+        <div class="col-md-12 spacer">
+          <div class="wrapper center">
+              <h2>Dice:</h2>
+              <div id="dice">
+                <img src="img/1.png"/>
+              </div>
+              <div id="winner">
+              </div>
+          </div>
+
+        </div>
+        <div class="col-md-6 spacer bgColor">
+          <div class="wrapper player1">
+            <h2> Player 1</h2>
+            <div id="player1RunningTotal">
+              Running Total: 0
+            </div>
+            <div id="player1Total">
+              Total: 0
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 spacer bgColor">
+          <div class="wrapper player2">
+              <h2>Player 2</h2>
+              <div id="player2RunningTotal">
+                Running Total: 0
+              </div>
+              <div id="player2Total">
+                Total: 0
+              </div>
+
+          </div>
+
+        </div>
+        <div class="center">
+          <button type="button" id="roll" class = "btn btn-success btn-lg" name="button">Roll</button>
+          <button type="button" id="hold" class = "btn btn-warning btn-lg" name="button">Hold</button>
+
+        </div>
+      </div>
+
+
+
+
     </div>
 
-    <div class="row" id="twoPlayer">
-      <div class="col-md-12 spacer">
-        <div class="wrapper center">
-          <h2>Dice:</h2>
-          <div id="dice">
-            <img src="img/1.png" />
-          </div>
-          <div id="winner">
-          </div>
-        </div>
-
-      </div>
-      <div class="col-md-6 spacer bgColor">
-        <div class="wrapper player1">
-          <h2> Player 1</h2>
-          <div id="player1RunningTotal">
-            Running Total: 0
-          </div>
-          <div id="player1Total">
-            Total: 0
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 spacer bgColor">
-        <div class="wrapper player2">
-          <h2>Player 2</h2>
-          <div id="player2RunningTotal">
-            Running Total: 0
-          </div>
-          <div id="player2Total">
-            Total: 0
-          </div>
-        </div>
-
-      </div>
-      <div class="center">
-        <button type="button" id="roll" class="btn btn-success btn-lg" name="button">Roll</button>
-        <button type="button" id="hold" class="btn btn-warning btn-lg" name="button">Hold</button>
-
-      </div>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>
