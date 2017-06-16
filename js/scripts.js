@@ -109,10 +109,7 @@ function showDice (dice){
 }
 
 
-
-
-
-
+//user interface
 
 $(document).ready(function (){
   var gameChoice = $('input:radio[name=gameChoice]:checked').val();
@@ -132,15 +129,15 @@ $(document).ready(function (){
       // console.log("ai");
       toelTheReferee.players[1].playerID = "ai";
 
-      //
+
 
     }
-    $(this).parent().parent().fadeOut(700, function (){
+    $(this).parent().parent().fadeOut(700, function (){  //parent() method traverses to the immediate parent of each of these elements
       $("#twoPlayer").fadeIn();
     });
   });
 
-  setInterval(function (){
+  setInterval(function (){   //setInterval() method will be used to time events
     if (player2.playerID === "ai" && player2.turn ===1 ){
       if (player2.runningTotal <= 15){
           toelTheReferee.throw();
@@ -168,8 +165,8 @@ $(document).ready(function (){
 
     }
 
-  }, 1000);
-     // setInterval(toelTheReferee.checkAiTurn, 1000);
+  }, 900);
+
 
   $("#roll").click(function (){
     toelTheReferee.checkGame();
