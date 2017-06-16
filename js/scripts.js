@@ -169,3 +169,35 @@ $(document).ready(function (){
     }
 
   }, 1000);
+     // setInterval(toelTheReferee.checkAiTurn, 1000);
+
+  $("#roll").click(function (){
+    toelTheReferee.checkGame();
+    toelTheReferee.throw();
+
+
+    showDice(toelTheReferee.dice);
+    showScore(player1, player2);
+    switchClass(player1, player2);
+
+    if (toelTheReferee.gameover === 1){
+      $("#winner").show().text(toelTheReferee.winner + "wins!!!");
+    }
+
+
+  });
+
+  $("#hold").click(function (){
+
+    toelTheReferee.hold();
+    showScore(player1, player2);
+    toelTheReferee.checkGame();
+
+    switchClass(player1, player2);
+    showDice(player1, player2);
+
+    if (toelTheReferee.gameover === 1){
+      $("#winner").show().text(toelTheReferee.winner + "wins!!!");
+    }
+  });
+});
