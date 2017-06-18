@@ -1,4 +1,4 @@
-ndfunction Player (playerID){
+function Player (playerID){
   this.score = 0;
   this.runningTotal = 0;
   this.turn = 0;
@@ -210,7 +210,7 @@ $(document).ready(function (){
 
 
   });
-  
+
  // press hold to pass section
 
   $("#hold").click(function (){
