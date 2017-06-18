@@ -1,4 +1,4 @@
-function Player (playerID){
+ndfunction Player (playerID){
   this.score = 0;
   this.runningTotal = 0;
   this.turn = 0;
@@ -12,6 +12,10 @@ function Referee (){
   this.dice = 0;
 }
 
+
+// probability section if the play scores a 1
+
+
 Referee.prototype.switchPlayer =  function (){
   if (this.players[0].turn === 1){
     this.players[0].turn = 0;
@@ -24,13 +28,20 @@ Referee.prototype.switchPlayer =  function (){
 
 }
 
+
+
 Referee.prototype.runningTotal = function (player) {
   player.score += player.runningTotal;
   player.runningTotal = 0;
 }
 
+
+
+// random number selection section
+
+
 Referee.prototype.throw = function (){
-  var result = Math.floor((Math.random() * 6) + 1);
+  var result = Math.floor((Math.random() * 6) + 1);    //random method
   if(this.gameover === 0){
     this.dice = result;
   }
@@ -41,6 +52,7 @@ Referee.prototype.throw = function (){
       this.players[0].runningTotal = 0;
       this.switchPlayer();
     }
+
   }else if (this.players[1].turn === 1) {
     if (result !=1){
       this.players[1].runningTotal += result;
@@ -49,7 +61,11 @@ Referee.prototype.throw = function (){
       this.switchPlayer();
     }
   }
-}
+};
+
+
+ // section on the hold key
+
 
 Referee.prototype.hold = function (){
   if (this.players[0].turn === 1){
@@ -66,11 +82,16 @@ Referee.prototype.hold = function (){
 Referee.prototype.pickPlayer = function (){
   this.players[0].turn = 1;
 }
+
+
+// declaration of the winner
+
+
 Referee.prototype.checkGame = function (){
   if (this.players[0].score >= 100){
     this.players[1].turn = 0;
     this.players[0].turn = 0;
-    this.winner = "Player 1 ";;
+    this.winner = "Player 1 ";
     this.gameover = 1;
   }else if (this.players[1].score >= 100){
     this.players[1].turn = 0;
@@ -137,10 +158,14 @@ $(document).ready(function (){
     });
   });
 
+
+ // showing of the hold and roll section....play section
+
+
   setInterval(function (){   //setInterval() method will be used to time events
     if (player2.playerID === "ai" && player2.turn ===1 ){
       if (player2.runningTotal <= 15){
-          toelTheReferee.throw();
+          toelTheReferee.throw();     //Execution of the current function will stop (the statements after throw won't be executed
           $("#hold").hide();
           $("#roll").hide();
       }else {
@@ -154,6 +179,7 @@ $(document).ready(function (){
       }
 
 
+// section of the declarion of the winner
 
       toelTheReferee.checkGame();
       if (toelTheReferee.gameover === 1){
@@ -167,6 +193,7 @@ $(document).ready(function (){
 
   }, 900);
 
+// press roll section to run the random number
 
   $("#roll").click(function (){
     toelTheReferee.checkGame();
@@ -183,6 +210,8 @@ $(document).ready(function (){
 
 
   });
+  
+ // press hold to pass section
 
   $("#hold").click(function (){
 
