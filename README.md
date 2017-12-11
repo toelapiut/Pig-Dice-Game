@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # PIG DICE GAME
 Author: [Apiut Toel](toelapiut7@gmail.com)
 ## Description
@@ -24,9 +22,3 @@ A web application that generates a number randomly and returns it with specific 
 Make sure you have git installed. On the terminal, navigate to your workspace directory and run
 ## Contributing
 pull requests are encouraged
-=======
-# PIG DICE
-
-=======
-# Pig-Dice-Game
->>>>>>> 2c10eb36d10d2dd7a50c1d7dd23cadea0e1e3a9e
